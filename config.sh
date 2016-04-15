@@ -214,6 +214,11 @@ case "$1" in
 	repo_sync sony-aosp-l
 	;;
 
+"vf795")
+	echo PRODUCT_NAME=vf795 >> .tmp-config &&
+	repo_sync $1
+	;;
+
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -271,6 +276,7 @@ case "$1" in
 	echo - flamingo-l "(E3 L)"
 	echo - eagle-l "(M2 L)"
 	echo - seagull-l "(T3 L)"
+	echo - vf795 "(Vodafone Smart Speed 6)"
 	exit -1
 	;;
 esac
